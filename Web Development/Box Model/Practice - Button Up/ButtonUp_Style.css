@@ -1,0 +1,44 @@
+/* margin: Top, Right, Bottom, Left
+    margin: Top/Bottom, Left/Right
+    margin: Everything */
+    
+/* CSS RESET */
+* {
+    padding: 0px;
+    margin: 10px;
+}
+
+/* CSS Classes */
+/* Classes can be reused for any HTML tags */
+.first {
+    display: block;
+    color: teal;
+    background-color: white;
+    border-radius: 125px;
+    padding: 10px 50 px;
+    margin: 10px;
+    height: 25px;
+    width: 150px;
+    border: 2px solid teal;
+
+}
+
+.second {
+    display: block;
+    background-color: aquamarine;
+    color:white;
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}
+
+.third {
+    display: block;
+    color: white; /*Font color */
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 2px 2px black;
+    background-color: blue;
+}
