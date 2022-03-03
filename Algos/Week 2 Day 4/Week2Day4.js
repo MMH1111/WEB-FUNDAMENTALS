@@ -2,7 +2,7 @@ function flatten(arr2d) {
     var flat = [];
     for (a = 0; a < arr2d.length; a++) { //              a = 0
         for (b = 0; b < arr2d[a].length; b++) { //       b = 0
-            flat.push(arr2d[a][b]);                  // arr2d[1][0]
+            flat.push(arr2d[a][b]);                  // arr2d[0][0]
         }
     }
     return flat;
