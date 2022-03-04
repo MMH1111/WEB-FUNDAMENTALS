@@ -25,12 +25,77 @@ function render(theDojo) {
 //        under the adjacent (all sides and corners) squares.
 //        Use i and j as the indexes to check theDojo.
 function howMany(i, j, element) {
-  console.log({i, j});
-  alert("TODO - determine how many ninjas are hiding in adjacent squares");
+  var count = 0;
+  if (i == 0 && j == 0) {
+    count += theDojo[i][j + 1];
+    count += theDojo[i + 1][j] + theDojo[i + 1][j + 1];
+  } else if (i == 0 && j == 9) {
+    count += theDojo[i][j - 1];
+    count += theDojo[i + 1][j - 1] + theDojo[i + 1][j];
+  } else if (i == 0) {
+    count += theDojo[i][j - 1] + theDojo[i][j + 1];
+    count += theDojo[i + 1][j - 1] + theDojo[i + 1][j] + theDojo[i + 1][j + 1];
+  } else if (i == 9 && j == 0) {
+    count += theDojo[i][j + 1];
+    count += theDojo[i - 1][j] + theDojo[i - 1][j + 1];
+  } else if (i == 9 && j == 9) {
+    count += theDojo[i][j - 1];
+    count += theDojo[i - 1][j - 1] + theDojo[i - 1][j];
+  } else if (i == 9) {
+    count += theDojo[i][j - 1] + theDojo[i][j + 1];
+    count += theDojo[i - 1][j - 1] + theDojo[i - 1][j] + theDojo[i - 1][j + 1];
+  }
+  else if (j == 0) {
+    count += theDojo[i][j + 1];
+    count += theDojo[i - 1][j] + theDojo[i - 1][j + 1];
+    count += theDojo[i + 1][j] + theDojo[i + 1][j + 1];
+  } else if (j == 9) {
+    count += theDojo[i][j - 1];
+    count += theDojo[i - 1][j - 1] + theDojo[i - 1][j];
+    count += theDojo[i + 1][j - 1] + theDojo[i + 1][j];
+  } else {
+    count += theDojo[i][j - 1] + theDojo[i][j + 1];
+    count += theDojo[i - 1][j - 1] + theDojo[i - 1][j] + theDojo[i - 1][j + 1];
+    count += theDojo[i + 1][j - 1] + theDojo[i + 1][j] + theDojo[i + 1][j + 1];
+  }
+
+  alert(count);
 }
+
     
 // BONUS CHALLENGES
 // 1. draw the number onto the button instead of alerting it
+//       [0,0] [0,1] [0,2] [0,3] [0,4] [0,5] [0,7] [0,8] [0,9] [0,10]
+// [0]     1     0     1     1     1     0     4     0     8     0    
+
+//       [1,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
+// [1]     3     1     0     7     0     0     6     0     8     8
+
+//       [2,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
+// [2]     5     0     7     0     3     6     6     6     0     0
+ 
+//       [3,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
+// [3]     2,    3,    0,    9,    0,    0,    6,    0,    8,    0
+
+//       [4,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
+// [4]     [6, 0, 3, 3, 0, 2, 0, 3, 0, 4],             
+
+//       [5,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
+// [5]     [0, 0, 3, 3, 0, 0, 2, 2, 3, 0],  
+
+//       [6,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
+// [6]     [0, 0, 0, 0, 5, 0, 1, 2, 0, 6],
+
+//       [7,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
+// [7]     [2, 2, 2, 2, 0, 7, 1, 1, 1, 0],
+                
+//       [8,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
+// [8]      [5, 2, 0, 2, 0, 0, 0, 1, 1, 2],          
+                
+//       [9,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
+// [9]       [9, 2, 2, 2, 0, 7, 0, 1, 1, 0]  
+               
+
 // 2. at the start randomly place 10 ninjas into theDojo with at most 1 on each spot
 // 3. if you click on a ninja you must restart the game 
 //    dojoDiv.innerHTML = `<button onclick="location.reload()">restart</button>`;
