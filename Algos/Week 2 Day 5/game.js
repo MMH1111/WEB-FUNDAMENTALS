@@ -66,18 +66,20 @@ function howMany(i, j, element) {
 function howMany(i, j, element) {
   console.log({i, j});
   var sum = 0;
-  for(y = i-1; y<i+2;y++) {
-    for(x=j-1; x<j+2;x++) {
-      if (x==j && y==1 {
-        console.log('don't check this');
-      } else if (x >=0 && y >=0 && x < theDojo[0].length && y<theDojo.length) {
-        console.log(`checking x:` + x + 'y:' + y)
+  for(y = i - 1; y < i + 2; y++) {
+    for(x = j - 1; x < j + 2; x++) {
+      if (x == j && y == i) {
+        console.log('dont check this');
+      } else if (x >= 0 && y >= 0 && x < theDojo[0].length && y < theDojo.length) {
+        console.log('checking x:' + x + ' y:' + y);
         console.log('# of ninjas: ' + theDojo[y][x]);
         sum += theDojo[y][x];
       }
-      })
-    }
   }
+}
+  element.innerHTML = sum;
+  console.log(sum);
+}
 
     
 // BONUS CHALLENGES
@@ -107,10 +109,10 @@ function howMany(i, j, element) {
 // [7]     2, 2, 2, 2, 0, 7, 1, 1, 1, 0
                 
 //       [8,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
-// [8]      [5, 2, 0, 2, 0, 0, 0, 1, 1, 2],          
+// [8]     5,    2,    0,    2,    0,    0,    0,    1,    1,    2          
                 
 //       [9,0] [1,1] [1,2] [1,3] [1,4] [1,5] [1,7] [1,8] [1,9] [1,10]
-// [9]       [9, 2, 2, 2, 0, 7, 0, 1, 1, 0]  
+// [9]     9,    2,    2,    2,    0,    7,    0,    1,    1,    0  
                
 
 // 2. at the start randomly place 10 ninjas into theDojo with at most 1 on each spot
