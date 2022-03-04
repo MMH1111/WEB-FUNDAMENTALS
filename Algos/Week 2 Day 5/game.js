@@ -24,43 +24,43 @@ function render(theDojo) {
 // TODO - Make this function tell us how many ninjas are hiding 
 //        under the adjacent (all sides and corners) squares.
 //        Use i and j as the indexes to check theDojo.
-function howMany(i, j, element) {
-  var count = 0;
-  if (i == 0 && j == 0) {
-    count += theDojo[i][j + 1];
-    count += theDojo[i + 1][j] + theDojo[i + 1][j + 1];
-  } else if (i == 0 && j == 9) {
-    count += theDojo[i][j - 1];
-    count += theDojo[i + 1][j - 1] + theDojo[i + 1][j];
-  } else if (i == 0) {
-    count += theDojo[i][j - 1] + theDojo[i][j + 1];
-    count += theDojo[i + 1][j - 1] + theDojo[i + 1][j] + theDojo[i + 1][j + 1];
-  } else if (i == 9 && j == 0) {
-    count += theDojo[i][j + 1];
-    count += theDojo[i - 1][j] + theDojo[i - 1][j + 1];
-  } else if (i == 9 && j == 9) {
-    count += theDojo[i][j - 1];
-    count += theDojo[i - 1][j - 1] + theDojo[i - 1][j];
-  } else if (i == 9) {
-    count += theDojo[i][j - 1] + theDojo[i][j + 1];
-    count += theDojo[i - 1][j - 1] + theDojo[i - 1][j] + theDojo[i - 1][j + 1];
-  }
-  else if (j == 0) {
-    count += theDojo[i][j + 1];
-    count += theDojo[i - 1][j] + theDojo[i - 1][j + 1];
-    count += theDojo[i + 1][j] + theDojo[i + 1][j + 1];
-  } else if (j == 9) {
-    count += theDojo[i][j - 1];
-    count += theDojo[i - 1][j - 1] + theDojo[i - 1][j];
-    count += theDojo[i + 1][j - 1] + theDojo[i + 1][j];
-  } else {
-    count += theDojo[i][j - 1] + theDojo[i][j + 1];
-    count += theDojo[i - 1][j - 1] + theDojo[i - 1][j] + theDojo[i - 1][j + 1];
-    count += theDojo[i + 1][j - 1] + theDojo[i + 1][j] + theDojo[i + 1][j + 1];
-  }
+// function howMany(i, j, element) {
+//   var count = 0;
+//   if (i == 0 && j == 0) {
+//     count += theDojo[i][j + 1];
+//     count += theDojo[i + 1][j] + theDojo[i + 1][j + 1];
+//   } else if (i == 0 && j == 9) {
+//     count += theDojo[i][j - 1];
+//     count += theDojo[i + 1][j - 1] + theDojo[i + 1][j];
+//   } else if (i == 0) {
+//     count += theDojo[i][j - 1] + theDojo[i][j + 1];
+//     count += theDojo[i + 1][j - 1] + theDojo[i + 1][j] + theDojo[i + 1][j + 1];
+//   } else if (i == 9 && j == 0) {
+//     count += theDojo[i][j + 1];
+//     count += theDojo[i - 1][j] + theDojo[i - 1][j + 1];
+//   } else if (i == 9 && j == 9) {
+//     count += theDojo[i][j - 1];
+//     count += theDojo[i - 1][j - 1] + theDojo[i - 1][j];
+//   } else if (i == 9) {
+//     count += theDojo[i][j - 1] + theDojo[i][j + 1];
+//     count += theDojo[i - 1][j - 1] + theDojo[i - 1][j] + theDojo[i - 1][j + 1];
+//   }
+//   else if (j == 0) {
+//     count += theDojo[i][j + 1];
+//     count += theDojo[i - 1][j] + theDojo[i - 1][j + 1];
+//     count += theDojo[i + 1][j] + theDojo[i + 1][j + 1];
+//   } else if (j == 9) {
+//     count += theDojo[i][j - 1];
+//     count += theDojo[i - 1][j - 1] + theDojo[i - 1][j];
+//     count += theDojo[i + 1][j - 1] + theDojo[i + 1][j];
+//   } else {
+//     count += theDojo[i][j - 1] + theDojo[i][j + 1];
+//     count += theDojo[i - 1][j - 1] + theDojo[i - 1][j] + theDojo[i - 1][j + 1];
+//     count += theDojo[i + 1][j - 1] + theDojo[i + 1][j] + theDojo[i + 1][j + 1];
+//   }
 
-  alert(count);
-}
+//   alert(count);
+// }
 
 //another way
 function howMany(i, j, element) {
